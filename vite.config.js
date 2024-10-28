@@ -8,5 +8,14 @@ export default defineConfig({
     alias: {
       "@": "/src",
     }
+  },
+  css: {
+    // css预处理器
+    preprocessorOptions: {
+      scss: {
+        // 给导入的路径最后加上 ; 
+        additionalData: '@import "@/assets/css/global.scss";'
+      }
+    }
   }
 });

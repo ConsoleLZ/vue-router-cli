@@ -1,0 +1,10 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  @include theme('background-color', 'bg-color');
+  @include theme('color', 'text-color');
+}
