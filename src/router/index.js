@@ -1,23 +1,20 @@
 import { createRouter, createWebHistory } from "vue-router";
-import Login from "@/pages/login/index.vue";
-import Home from "@/pages/home/index.vue";
-import P404 from "@/pages/404/index.vue";
 
 const routes = [
     {
         path: '/',
         name: 'home',
-        component: Home,
+        component: ()=>import('@/pages/home/index.vue'),
     },
     {
         path: '/login',
         name: 'login',
-        component: Login,
+        component: ()=>import('@/pages/login/index.vue'),
     },
     {
         path: '/404',
         name: '404',
-        component: P404,
+        component: ()=>import('@/pages/404/index.vue'),
     },
     {
         path: '/:catchAll(.*)', // 使用带有正则表达式的参数
